@@ -1,6 +1,7 @@
 const { GraphQLServer } = require("graphql-yoga");
 const { PrismaClient } = require("@prisma/client");
 const { PubSub } = require("graphql-yoga");
+const Subscription = require("./resolvers/Subscription");
 
 const pubsub = new PubSub();
 
@@ -16,6 +17,7 @@ const resolvers = {
   Mutation,
   User,
   Link,
+  Subscription,
 };
 
 
